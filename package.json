@@ -5,12 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "cd .. && npm run dev --prefix frontend",
-    "clientinstall": "cd .. && npm install --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd ../frontend && npm install --legacy-peer-deps && npm run build"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,9 +15,5 @@
     "express": "^4.18.2",
     "node-fetch": "^3.2.10",
     "path": "^0.12.7"
-  },
-  "devDependencies": {
-    "concurrently": "^7.5.0",
-    "nodemon": "^2.0.20"
   }
 }
