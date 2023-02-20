@@ -18,7 +18,7 @@ app.get('*', async (req, res) => {
       'Content-Type': 'application/json',
     },
   }
-  const parsed = JSON.parse(req.query.proofs) || ''
+  const parsed = req.query.proofs ? JSON.parse(req.query.proofs) : ''
   const response = await fetch(`${requestEndpoint}?q=${parsed}`, fetchOptions)
   const jsonResponse = await response.json()
   res.json(jsonResponse)
